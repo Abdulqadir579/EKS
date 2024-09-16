@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: hello-qadir
   labels:
-    app: hello-world
+    app: hello-qadir
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: hello-world
+      app: hello-qadir
   template:
     metadata:
       labels:
-        app: hello-world
+        app: hello-qadir
     spec:
       containers:
-      - name: hello-world
-        image: <dockerhub-username>/hello-world:v1
+      - name: hello-qadir
+        image: aqkhan001/eks-repository:v1
         ports:
         - containerPort: 80

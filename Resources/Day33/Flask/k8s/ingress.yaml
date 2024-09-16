@@ -1,19 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-world
+  name: hello-qadir
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
-  - host: "example.com"
+  - host: "trainwithqadir.com"
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: hello-world
+            name: hello-qadir
             port:
               number: 80
